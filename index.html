@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sertop — Presupuestos y certificados para técnicos de climatización, refrigeración y HVAC. Sitio en construcción." />
+  <title>Sertop — Sitio en construcción</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-inner container">
+      <span class="logo">Sertop</span>
+      <span class="badge">En construcción</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Climatización · Refrigeración · HVAC</p>
+        <h1 class="hero-title">Presupuestos y certificados profesionales para técnicos</h1>
+        <p class="hero-subtitle">
+          Crea, gestiona y compartí presupuestos y certificados con tus clientes, directo desde tu teléfono.
+          Trabajá en obra o en taller, incluso sin conexión.
+        </p>
+        <div class="hero-cta">
+          <span class="pill">Próximamente</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Todo lo que necesitás para tu trabajo diario</h2>
+        <div class="features-grid">
+          <article class="card">
+            <div class="card-icon">📄</div>
+            <h3>Presupuestos y certificados</h3>
+            <p>Creación manual, con asistente paso a paso o desde plantillas predefinidas.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">👥</div>
+            <h3>Gestión de clientes</h3>
+            <p>Registro completo con nombre, teléfono, dirección y búsqueda rápida.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">❄️</div>
+            <h3>Equipos vinculados</h3>
+            <p>Registrá tipo, marca, modelo y capacidad, y vinculalos a tus documentos.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🧮</div>
+            <h3>Herramientas de cálculo</h3>
+            <p>Conversor de unidades frigorías ↔ BTU ↔ watts y más.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📲</div>
+            <h3>Offline-first</h3>
+            <p>Base de datos local con sincronización automática al recuperar conexión.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📤</div>
+            <h3>Exportación a PDF</h3>
+            <p>Compartí tus documentos como PDF con solo un toque.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="under-construction">
+      <div class="container">
+        <h2>Estamos trabajando en esto</h2>
+        <p>
+          La aplicación ya está en desarrollo y este sitio web se encuentra en construcción.
+          Muy pronto vas a encontrar acá toda la información del proyecto y novedades.
+        </p>
+        <div class="progress-bar"><span class="progress-fill"></span></div>
+        <p class="progress-label">Construyendo…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">Sertop</span>
+      <p>© <span id="year"></span> Sertop — Presupuestos para técnicos de HVAC. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

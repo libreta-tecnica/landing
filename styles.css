@@ -1,0 +1,237 @@
+:root {
+  --primary: #3D64F4;
+  --background-primary: #2d4394ff;
+  --text-primary: #ffffffea;
+  --dark-bg: #1F2B43;
+  --dark-text: #ECEDEE;
+  --light-text: #11181C;
+  --light-bg: #ffffff;
+  --icon: #687076;
+  --shadow: rgba(17, 24, 28, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--light-text);
+  background: var(--light-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.navbar {
+  background: var(--background-primary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.hero {
+  background: linear-gradient(160deg, var(--background-primary) 0%, var(--primary) 100%);
+  color: var(--text-primary);
+  padding: 96px 0 112px;
+  text-align: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  max-width: 760px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  max-width: 620px;
+  opacity: 0.92;
+}
+
+.pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: default;
+}
+
+.features {
+  padding: 88px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--light-bg);
+  border: 1px solid #e8edf2;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--icon);
+  font-size: 0.95rem;
+}
+
+.under-construction {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  padding: 88px 0;
+  text-align: center;
+}
+
+.under-construction h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.under-construction p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--icon);
+}
+
+.progress-bar {
+  margin: 32px auto 12px;
+  width: 100%;
+  max-width: 480px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  display: block;
+  width: 45%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { width: 35%; }
+  50% { width: 65%; }
+}
+
+.progress-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer {
+  background: var(--background-primary);
+  color: var(--text-primary);
+  padding: 32px 0;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 64px 0 80px;
+  }
+
+  .features,
+  .under-construction {
+    padding: 64px 0;
+  }
+}
