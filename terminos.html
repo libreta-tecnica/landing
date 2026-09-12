@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Términos y Condiciones de uso y política de licencia de Sertop." />
+  <title>Términos y Condiciones — Sertop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #3D64F4;
+      --background-primary: #2d4394ff;
+      --text-primary: #ffffffea;
+      --dark-bg: #1F2B43;
+      --dark-text: #ECEDEE;
+      --light-text: #11181C;
+      --light-bg: #ffffff;
+      --icon: #687076;
+      --shadow: rgba(17, 24, 28, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--light-text);
+      background: var(--light-bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .navbar {
+      background: var(--background-primary);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .legal-hero {
+      background: linear-gradient(160deg, var(--background-primary) 0%, var(--primary) 100%);
+      color: var(--text-primary);
+      padding: 72px 0 80px;
+    }
+
+    .legal-hero-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 820px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .legal-title {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .legal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      font-size: 0.9rem;
+      font-weight: 300;
+      opacity: 0.92;
+    }
+
+    .legal-body {
+      padding: 64px 0 88px;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      color: #33404a;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #e8edf2;
+    }
+
+    .toc {
+      background: #f6f8fb;
+      border: 1px solid #e8edf2;
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 56px;
+    }
+
+    .toc h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 8px 24px;
+    }
+
+    .toc-list a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: flex;
+      gap: 8px;
+    }
+
+    .toc-list a:hover {
+      text-decoration: underline;
+    }
+
+    .toc-num {
+      font-weight: 700;
+      min-width: 22px;
+      opacity: 0.7;
+    }
+
+    .legal-section {
+      margin-bottom: 40px;
+      scroll-margin-top: 80px;
+    }
+
+    .legal-section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--background-primary);
+      margin-bottom: 16px;
+      line-height: 1.35;
+    }
+
+    .legal-section p {
+      margin-bottom: 14px;
+      color: #33404a;
+    }
+
+    .legal-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-list {
+      list-style: none;
+      margin: 4px 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .legal-list li {
+      position: relative;
+      padding-left: 22px;
+      color: #33404a;
+    }
+
+    .legal-list li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0.62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .legal-section a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .legal-section a:hover {
+      text-decoration: underline;
+    }
+
+    .closing {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-top: 48px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .back-wrap {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .back-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+
+    .footer {
+      background: var(--background-primary);
+      color: var(--text-primary);
+      padding: 32px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .footer a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      .legal-hero {
+        padding: 48px 0 56px;
+      }
+
+      .legal-body {
+        padding: 48px 0 64px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-inner container">
+      <a class="logo" href="index.html">Sertop</a>
+      <span class="badge">Términos y condiciones</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="container legal-hero-inner">
+        <p class="eyebrow">Legal</p>
+        <h1 class="legal-title">Términos y Condiciones de Uso y Política de Licencia</h1>
+        <div class="legal-meta">
+          <span>Última actualización: 1 de septiembre de 2026</span>
+          <span>Versión: 1.0.0</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container legal-body">
+      <p class="intro">
+        Estos Términos y Condiciones regulan el acceso, registro, descarga, instalación y utilización de Sertop (en adelante, la "Aplicación"), desarrollada y administrada por (en adelante, el "Desarrollador"). Al descargar, instalar, registrarse o utilizar la Aplicación, el usuario declara haber leído, comprendido y aceptado estos Términos y Condiciones.
+      </p>
+
+      <nav class="toc" aria-label="Índice de contenidos">
+        <h2>Índice de contenidos</h2>
+        <ul class="toc-list">
+          <li><a href="#seccion-1"><span class="toc-num">1.</span> Aceptación de los términos y requisito de edad</a></li>
+          <li><a href="#seccion-2"><span class="toc-num">2.</span> Naturaleza y finalidad de la aplicación</a></li>
+          <li><a href="#seccion-3"><span class="toc-num">3.</span> Propiedad intelectual y titularidad</a></li>
+          <li><a href="#seccion-4"><span class="toc-num">4.</span> Cuentas y credenciales</a></li>
+          <li><a href="#seccion-5"><span class="toc-num">5.</span> Información introducida por el usuario</a></li>
+          <li><a href="#seccion-6"><span class="toc-num">6.</span> Presupuestos, cálculos y documentos generados</a></li>
+          <li><a href="#seccion-7"><span class="toc-num">7.</span> Inteligencia artificial</a></li>
+          <li><a href="#seccion-8"><span class="toc-num">8.</span> Servicios de terceros</a></li>
+          <li><a href="#seccion-9"><span class="toc-num">9.</span> Suscripciones y precios</a></li>
+          <li><a href="#seccion-10"><span class="toc-num">10.</span> Disponibilidad, actualizaciones y cambios</a></li>
+          <li><a href="#seccion-11"><span class="toc-num">11.</span> Limitación de responsabilidad</a></li>
+          <li><a href="#seccion-12"><span class="toc-num">12.</span> Seguridad y protección de datos</a></li>
+          <li><a href="#seccion-13"><span class="toc-num">13.</span> Protección de menores</a></li>
+          <li><a href="#seccion-14"><span class="toc-num">14.</span> Usos prohibidos</a></li>
+          <li><a href="#seccion-15"><span class="toc-num">15.</span> Suspensión y terminación</a></li>
+          <li><a href="#seccion-16"><span class="toc-num">16.</span> Modificaciones de estos términos</a></li>
+          <li><a href="#seccion-17"><span class="toc-num">17.</span> Legislación aplicable</a></li>
+          <li><a href="#seccion-18"><span class="toc-num">18.</span> Contacto</a></li>
+        </ul>
+      </nav>
+
+      <section class="legal-section" id="seccion-1">
+        <h2>1. Aceptación de los términos y requisito de edad</h2>
+        <p>La Aplicación está destinada exclusivamente a personas que tengan capacidad legal suficiente para contratar y utilizar servicios digitales y, como regla general, a personas mayores de 18 años.</p>
+        <p>La Aplicación no está dirigida a niños ni a menores de edad, ni ha sido diseñada específicamente para ese público.</p>
+        <p>Al registrarse o utilizar la Aplicación, el usuario declara que:</p>
+        <ul class="legal-list">
+          <li>Tiene al menos 18 años de edad.</li>
+          <li>Posee capacidad legal suficiente para aceptar estos Términos.</li>
+          <li>La información proporcionada durante el registro es verdadera y actualizada.</li>
+          <li>No utilizará la Aplicación si no cumple con el requisito de edad establecido.</li>
+        </ul>
+        <p>El Desarrollador podrá implementar mecanismos de comprobación o declaración de edad cuando lo considere necesario, incluyendo controles de edad, fecha de nacimiento, verificación de cuenta u otros mecanismos técnicamente disponibles.</p>
+        <p>Si se detecta o se informa de manera razonable que una cuenta pertenece a una persona que no cumple con el requisito de edad, el Desarrollador podrá restringir, suspender o cancelar dicha cuenta y eliminar los datos personales correspondientes cuando resulte legalmente procedente.</p>
+        <p>El usuario no podrá falsear su edad ni utilizar los datos de otra persona para acceder a la Aplicación.</p>
+        <p>La declaración de edad no implica que el Desarrollador realice una verificación absoluta de identidad, salvo que expresamente se indique lo contrario.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-2">
+        <h2>2. Naturaleza y finalidad de la aplicación</h2>
+        <p>Sertop es una herramienta tecnológica destinada principalmente a profesionales, técnicos, prestadores de servicios y comercios, cuya finalidad puede incluir, entre otras funciones:</p>
+        <ul class="legal-list">
+          <li>Elaboración y gestión de presupuestos.</li>
+          <li>Registro y administración de clientes.</li>
+          <li>Organización de trabajos y servicios.</li>
+          <li>Cálculo de precios, materiales, mano de obra y otros conceptos.</li>
+          <li>Generación y exportación de documentos.</li>
+          <li>Envío o compartición de presupuestos mediante servicios externos.</li>
+          <li>Almacenamiento de información introducida por el usuario.</li>
+          <li>Utilización de herramientas de Inteligencia Artificial, cuando se encuentren disponibles.</li>
+          <li>Otras funciones administrativas, comerciales o técnicas incorporadas posteriormente.</li>
+        </ul>
+        <p>La Aplicación constituye exclusivamente una herramienta de asistencia y gestión.</p>
+        <p>El Desarrollador no actúa como técnico, instalador, comerciante, contratista, intermediario, representante ni parte en las relaciones comerciales que el usuario mantenga con sus propios clientes.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-3">
+        <h2>3. Propiedad intelectual y titularidad</h2>
+        <p>Todos los derechos de propiedad intelectual relacionados con la Aplicación, incluyendo, entre otros, código fuente, código objeto, arquitectura, diseño, interfaces, gráficos, logotipos, nombres, marcas, bases de datos, algoritmos, sistemas de cálculo, documentación y funcionalidades, pertenecen al Desarrollador o a sus respectivos licenciantes.</p>
+        <p>La descarga o instalación de la Aplicación no transfiere al usuario ningún derecho de propiedad sobre ella.</p>
+        <p>El usuario recibe únicamente una licencia limitada, personal, no exclusiva, revocable, no sublicenciable y no transferible para utilizar la Aplicación conforme a estos Términos.</p>
+        <p>Queda prohibido:</p>
+        <ul class="legal-list">
+          <li>Copiar, modificar o distribuir la Aplicación sin autorización.</li>
+          <li>Realizar ingeniería inversa, descompilar o intentar obtener el código fuente.</li>
+          <li>Crear productos derivados basados en la Aplicación.</li>
+          <li>Revender, alquilar, sublicenciar o transferir el acceso.</li>
+          <li>Eliminar mecanismos de seguridad o restricciones técnicas.</li>
+          <li>Utilizar la Aplicación para desarrollar un producto competidor mediante extracción sistemática de sus funcionalidades o contenidos.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section" id="seccion-4">
+        <h2>4. Cuentas y credenciales</h2>
+        <p>Cuando la Aplicación requiera una cuenta, el usuario será responsable de proporcionar información verdadera, completa y actualizada.</p>
+        <p>El usuario será responsable de mantener la confidencialidad de sus credenciales de acceso y de toda actividad realizada desde su cuenta.</p>
+        <p>El usuario deberá informar al Desarrollador cuando detecte un acceso no autorizado o cualquier incidente relacionado con la seguridad de su cuenta.</p>
+        <p>El Desarrollador podrá suspender temporalmente una cuenta cuando existan indicios razonables de uso fraudulento, ilegal, abusivo o contrario a estos Términos.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-5">
+        <h2>5. Información introducida por el usuario</h2>
+        <p>El usuario conserva la responsabilidad sobre la información, textos, imágenes, datos de clientes, precios, presupuestos, diagnósticos y demás contenido que introduzca en la Aplicación.</p>
+        <p>El usuario declara que posee los derechos, autorizaciones o bases legales necesarias para introducir y procesar dicha información.</p>
+        <p>El usuario deberá evitar introducir información que no esté autorizado a utilizar.</p>
+        <p>En particular, cuando registre datos pertenecientes a sus propios clientes, será responsabilidad del usuario cumplir con las obligaciones legales que correspondan respecto de dichos datos.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-6">
+        <h2>6. Presupuestos, cálculos y documentos generados</h2>
+        <p>La Aplicación funciona exclusivamente como una herramienta tecnológica de asistencia administrativa y de cálculo.</p>
+        <p>Los precios, diagnósticos, cantidades, materiales, mano de obra, impuestos, descuentos, garantías, condiciones comerciales, plazos de validez y demás información incorporada en un presupuesto son responsabilidad exclusiva del usuario que los genera.</p>
+        <p>Los documentos generados por la Aplicación deben ser revisados por el usuario antes de ser entregados, enviados o utilizados frente a terceros.</p>
+        <p>El Desarrollador no garantiza que los cálculos, precios, textos o resultados generados sean adecuados para una situación comercial o técnica particular.</p>
+        <p>El usuario debe verificar la información antes de utilizarla.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-7">
+        <h2>7. Inteligencia artificial</h2>
+        <p>Cuando la Aplicación incorpore funciones basadas en Inteligencia Artificial, dichas funciones tendrán carácter asistencial y orientativo.</p>
+        <p>Las respuestas, recomendaciones, textos, cálculos o resultados generados mediante Inteligencia Artificial pueden contener errores, omisiones o información incorrecta.</p>
+        <p>El usuario será responsable de revisar y validar cualquier resultado generado mediante Inteligencia Artificial antes de utilizarlo profesional, comercial, técnica o legalmente.</p>
+        <p>La utilización de Inteligencia Artificial no convierte al Desarrollador en responsable del trabajo profesional realizado posteriormente por el usuario.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-8">
+        <h2>8. Servicios de terceros</h2>
+        <p>La Aplicación podrá integrarse o interactuar con servicios de terceros, incluyendo, entre otros, servicios de almacenamiento, autenticación, procesamiento de pagos, Inteligencia Artificial, correo electrónico, mensajería, generación de documentos, servicios de Google, sistemas operativos y tiendas de aplicaciones.</p>
+        <p>El funcionamiento de dichos servicios depende de sus respectivos proveedores y términos de uso.</p>
+        <p>El Desarrollador no controla ni garantiza la disponibilidad permanente, funcionamiento, seguridad o continuidad de servicios pertenecientes a terceros.</p>
+        <p>El usuario deberá cumplir también con las condiciones de uso de dichos servicios cuando corresponda.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-9">
+        <h2>9. Suscripciones y precios</h2>
+        <p>La Aplicación podrá ofrecer una versión gratuita, períodos de prueba, versiones Beta, funciones limitadas, planes de suscripción o funcionalidades de pago.</p>
+        <p>Las características incluidas en cada plan podrán variar.</p>
+        <p>El Desarrollador podrá modificar los precios, límites, características y condiciones comerciales de los planes, procurando comunicar dichos cambios con una antelación razonable cuando corresponda.</p>
+        <p>Las suscripciones adquiridas mediante Google Play, Apple App Store u otras plataformas estarán además sujetas a las condiciones de facturación, renovación y cancelación establecidas por la plataforma correspondiente.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-10">
+        <h2>10. Disponibilidad, actualizaciones y cambios</h2>
+        <p>La Aplicación se proporciona en función de su disponibilidad técnica.</p>
+        <p>El Desarrollador podrá:</p>
+        <ul class="legal-list">
+          <li>Actualizar la Aplicación.</li>
+          <li>Incorporar nuevas funciones.</li>
+          <li>Modificar funcionalidades existentes.</li>
+          <li>Eliminar funciones.</li>
+          <li>Corregir errores.</li>
+          <li>Realizar tareas de mantenimiento.</li>
+          <li>Modificar la interfaz.</li>
+          <li>Suspender temporalmente determinadas funciones.</li>
+        </ul>
+        <p>Estas modificaciones podrán producirse por razones técnicas, de seguridad, comerciales, legales o de evolución del producto.</p>
+        <p>Cuando una modificación afecte sustancialmente los derechos del usuario, se procurará comunicarla de manera razonable cuando resulte aplicable.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-11">
+        <h2>11. Limitación de responsabilidad</h2>
+        <p>La Aplicación se proporciona "tal cual" y según disponibilidad, dentro de los límites permitidos por la legislación aplicable.</p>
+        <p>El Desarrollador no garantiza que la Aplicación funcione de forma permanente, ininterrumpida o libre de errores.</p>
+        <p>En la medida permitida por la legislación vigente, el Desarrollador no será responsable por daños derivados de:</p>
+        <ul class="legal-list">
+          <li>Uso incorrecto de la Aplicación.</li>
+          <li>Información incorrecta introducida por el usuario.</li>
+          <li>Presupuestos elaborados o enviados por el usuario.</li>
+          <li>Errores de interpretación o utilización de resultados generados por la Aplicación.</li>
+          <li>Trabajos realizados por el usuario frente a sus clientes.</li>
+          <li>Pérdidas comerciales derivadas de presupuestos o contratos.</li>
+          <li>Fallas de Internet o del dispositivo del usuario.</li>
+          <li>Fallas de servicios externos.</li>
+          <li>Interrupciones temporales.</li>
+          <li>Pérdida o corrupción de información ocasionada por causas ajenas al control razonable del Desarrollador.</li>
+        </ul>
+        <p>Nada de lo establecido en estos Términos pretende excluir o limitar responsabilidades que legalmente no puedan ser excluidas o limitadas.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-12">
+        <h2>12. Seguridad y protección de datos</h2>
+        <p>El tratamiento de datos personales realizado mediante la Aplicación se regirá además por la Política de Privacidad correspondiente.</p>
+        <p>El usuario deberá consultar dicha Política de Privacidad antes de utilizar la Aplicación.</p>
+        <p>El Desarrollador adoptará medidas razonables de seguridad destinadas a proteger la información procesada mediante la Aplicación, sin que ello implique garantizar una seguridad absoluta frente a todos los riesgos tecnológicos existentes.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-13">
+        <h2>13. Protección de menores</h2>
+        <p>La Aplicación no está dirigida a menores de edad.</p>
+        <p>No se permite el registro ni la utilización de la Aplicación por personas menores de 18 años.</p>
+        <p>La Aplicación no solicita deliberadamente información personal de menores con el propósito de crear cuentas para ellos.</p>
+        <p>Si el Desarrollador toma conocimiento de que se ha creado una cuenta perteneciente a una persona que no cumple con el requisito de edad, podrá suspender o eliminar dicha cuenta y adoptar las medidas correspondientes respecto de la información asociada, de conformidad con la legislación aplicable.</p>
+        <p>Los padres, tutores o representantes legales que detecten que un menor ha utilizado la Aplicación podrán comunicarse con el Desarrollador mediante los canales oficiales indicados en la Aplicación o en la Política de Privacidad.</p>
+        <p>La Aplicación procurará mantener una configuración de público objetivo coherente con su finalidad profesional y con las declaraciones efectuadas ante Google Play u otras plataformas de distribución.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-14">
+        <h2>14. Usos prohibidos</h2>
+        <p>El usuario no podrá utilizar la Aplicación para:</p>
+        <ul class="legal-list">
+          <li>Actividades ilegales.</li>
+          <li>Fraude o estafa.</li>
+          <li>Suplantación de identidad.</li>
+          <li>Acceso no autorizado a sistemas o cuentas.</li>
+          <li>Distribución de contenido ilícito.</li>
+          <li>Vulneración de derechos de terceros.</li>
+          <li>Actividades destinadas a perjudicar la seguridad o funcionamiento de la Aplicación.</li>
+          <li>Manipulación de sistemas de pago, suscripciones o mecanismos de seguridad.</li>
+          <li>Cualquier actividad que infrinja estos Términos o la legislación aplicable.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section" id="seccion-15">
+        <h2>15. Suspensión y terminación</h2>
+        <p>El Desarrollador podrá suspender o cancelar el acceso a una cuenta cuando exista incumplimiento de estos Términos, uso fraudulento, actividad ilegal, riesgo de seguridad o cualquier otra causa justificada.</p>
+        <p>El usuario podrá dejar de utilizar la Aplicación en cualquier momento.</p>
+        <p>La cancelación de una cuenta no elimina necesariamente las obligaciones que, por su naturaleza, deban continuar vigentes después de la terminación.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-16">
+        <h2>16. Modificaciones de estos términos</h2>
+        <p>El Desarrollador podrá modificar estos Términos cuando sea necesario debido a cambios legales, técnicos, comerciales o funcionales.</p>
+        <p>La versión vigente estará disponible dentro de la Aplicación o mediante los canales oficiales correspondientes.</p>
+        <p>Cuando los cambios sean sustanciales, se procurará informar al usuario de manera razonable antes de su entrada en vigor, cuando legalmente corresponda.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-17">
+        <h2>17. Legislación aplicable</h2>
+        <p>Estos Términos se regirán por las leyes de la República Argentina, sin perjuicio de las normas de protección al consumidor y demás disposiciones imperativas que resulten aplicables.</p>
+        <p>Cualquier controversia será sometida a la jurisdicción que legalmente corresponda conforme a la normativa vigente.</p>
+      </section>
+
+      <section class="legal-section" id="seccion-18">
+        <h2>18. Contacto</h2>
+        <p>Para consultas relacionadas con estos Términos, la cuenta, la edad del usuario, privacidad o funcionamiento de la Aplicación, el usuario podrá comunicarse mediante:</p>
+        <ul class="legal-list">
+          <li>Correo electrónico: <a href="mailto:sertopapps@gmail.com">sertopapps@gmail.com</a></li>
+          <li>Sitio web: <a href="https://sertop.com.ar" target="_blank" rel="noopener">https://sertop.com.ar</a></li>
+          <li>Aplicación: Sertop</li>
+        </ul>
+      </section>
+
+      <p class="closing">
+        Al descargar, instalar, registrarse o utilizar Sertop, el usuario declara haber leído y aceptado estos Términos y Condiciones y declara cumplir con el requisito de edad establecido.
+      </p>
+
+      <div class="back-wrap">
+        <a class="back-link" href="index.html">Volver al inicio</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="index.html">Sertop</a>
+      <p>© <span id="year"></span> Sertop — Presupuestos para técnicos de HVAC. Todos los derechos reservados.</p>
+      <p><a href="terminos.html">Términos y condiciones</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
